@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Veeva Vault Environment Colors GR",
+  "version": "7.0.0",
+  "description": "Configurable automatic header colors for Veeva Vault environments.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://*.veevavault.com/*"],
+  "action": {
+    "default_title": "Veeva environment colors",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://*.veevavault.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }]
+}

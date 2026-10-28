@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Veeva környezetszínek</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>Veeva környezetszínek</h1>
+    <p class="hint">Adj meg teljes URL-t vagy hostnevet, címkét és színt.</p>
+    <div id="rows"></div>
+    <div class="actions">
+      <button id="add" type="button" class="add" title="Új környezet">+ Környezet</button>
+      <button id="save" type="button" class="save">Mentés</button>
+    </div>
+    <div id="status" role="status"></div>
+  </main>
+  <template id="rowTemplate">
+    <section class="row">
+      <label>URL / hostname<input class="host" type="text" placeholder="example-sbx.veevavault.com"></label>
+      <div class="two">
+        <label>Környezet<input class="label" type="text" placeholder="CONFIG" maxlength="24"></label>
+        <label>Szín<span class="colorLine"><input class="color" type="color" value="#1565C0"><input class="hex" type="text" value="#1565C0" maxlength="7"></span></label>
+      </div>
+      <button class="remove" type="button" title="Környezet törlése">Törlés</button>
+    </section>
+  </template>
+  <script src="popup.js"></script>
+</body>
+</html>
